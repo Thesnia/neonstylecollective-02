@@ -310,6 +310,14 @@ const Index = () => {
       <Hero />
       
       <ProductCategory 
+        id="makeup"
+        title="Luxury Makeup"
+        description="Beauty products for all skin tones, crafted with the finest ingredients for radiant results."
+        products={makeupProducts}
+        accentColor="#39FF14" // neon green
+      />
+      
+      <ProductCategory 
         id="bags"
         title="Luxury Bags"
         description="Discover our collection of handcrafted, premium quality bags made in the UK by master artisans."
@@ -333,14 +341,6 @@ const Index = () => {
         description="Elegance and sophistication define our range of clothing and accessories for the modern gentleman."
         products={mensProducts}
         accentColor="#8A2BE2" // neon purple
-      />
-      
-      <ProductCategory 
-        id="makeup"
-        title="Luxury Makeup"
-        description="Beauty products for all skin tones, crafted with the finest ingredients for radiant results."
-        products={makeupProducts}
-        accentColor="#39FF14" // neon green
       />
       
       <ProductCategory 

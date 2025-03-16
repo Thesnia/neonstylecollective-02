@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Menu, X, ShoppingBag, User, Search } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -7,6 +8,9 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
   const categories = [{
+    name: 'Makeup',
+    href: '#makeup'
+  }, {
     name: 'Bags',
     href: '#bags'
   }, {
@@ -15,9 +19,6 @@ const Navbar = () => {
   }, {
     name: 'Men\'s Collection',
     href: '#mens-collection'
-  }, {
-    name: 'Makeup',
-    href: '#makeup'
   }, {
     name: 'Skincare',
     href: '#skincare'
