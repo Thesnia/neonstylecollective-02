@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, ShoppingBag, User, Search } from 'lucide-react';
 import { cn } from '@/lib/utils';
+
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  
   const categories = [{
     name: 'Bags',
     href: '#bags'
@@ -16,7 +18,11 @@ const Navbar = () => {
   }, {
     name: 'Makeup',
     href: '#makeup'
+  }, {
+    name: 'Skincare',
+    href: '#skincare'
   }];
+  
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
@@ -24,6 +30,7 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+  
   return <header className={cn('fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 md:px-8', isScrolled ? 'glass py-4' : 'bg-transparent py-6')}>
       <nav className="max-w-7xl mx-auto flex items-center justify-between">
         <a href="#" className="flex items-center">
@@ -69,4 +76,5 @@ const Navbar = () => {
         </div>}
     </header>;
 };
+
 export default Navbar;
