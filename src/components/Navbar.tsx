@@ -34,8 +34,13 @@ const Navbar = () => {
   
   return <header className={cn('fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 md:px-8', isScrolled ? 'glass py-4' : 'bg-transparent py-6')}>
       <nav className="max-w-7xl mx-auto flex items-center justify-between">
-        <a href="#" className="flex items-center">
-          <span className={cn('text-2xl font-bold transition-colors duration-300', isScrolled ? 'text-neon-pink' : 'text-white')}>The Royal Kart</span>
+        <a href="#" className="flex items-center space-x-2">
+          <div className={cn('text-2xl font-extrabold tracking-tight transition-colors duration-300', isScrolled ? 'text-neon-pink' : 'text-white')}>
+            <span className="relative">
+              <span className="mr-2 inline-block animate-float">🇬🇧</span>
+              <span className="bg-gradient-to-r from-neon-pink via-neon-purple to-neon-blue bg-clip-text text-transparent">The Royal Kart</span>
+            </span>
+          </div>
         </a>
 
         {/* Desktop Navigation */}
